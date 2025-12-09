@@ -14,22 +14,28 @@
       object-fit: cover;
       width: 100%;
     }
+
     body {
       font-family: 'Roboto', sans-serif;
     }
+
     .hero-image {
       background-image: url('https://img.freepik.com/free-photo/website-hosting-concept-with-bright-light_23-2149406783.jpg?semt=ais_se_enriched&w=740&q=80');
       background-size: cover;
       background-position: center;
       height: 400px;
     }
+
     .hero-image .display-3 {
       color: white;
       font-weight: 700;
     }
+
     .hero-image p {
       color: white;
     }
+
+    /* BUTTON STYLES */
     .btn-custom-primary {
       background-color: #007bff;
       color: white;
@@ -44,6 +50,7 @@
       color: #007bff;
       border-color: #007bff;
     }
+
     .btn-custom-secondary {
       background-color: #28a745;
       color: white;
@@ -53,6 +60,12 @@
       border-radius: 30px;
       transition: all 0.3s ease;
     }
+    .btn-custom-secondary:hover {
+      background-color: white;
+      color: #28a745;
+      border-color: #28a745;
+    }
+
     .btn-custom-contact {
       background-color: #FFB6C1;
       color: white;
@@ -62,16 +75,57 @@
       border-radius: 30px;
       transition: all 0.3s ease;
     }
-    .btn-custom-secondary:hover {
-      background-color: white;
-      color: #28a745;
-      border-color: #28a745;
-    }
-    }
     .btn-custom-contact:hover {
       background-color: white;
       color: #FFB6C1;
       border-color: #FFB6C1;
+    }
+
+    /* RESPONSIVENESS */
+    @media (max-width: 991px) {
+      .hero-image {
+        height: 330px;
+      }
+      .hero-image .display-3 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-image {
+        height: 300px;
+      }
+      .hero-image .display-3 {
+        font-size: 2rem;
+      }
+      .hero-image p {
+        font-size: 1rem;
+      }
+      .carousel-item img {
+        height: 260px;
+      }
+      .btn-custom-primary,
+      .btn-custom-secondary,
+      .btn-custom-contact {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-image {
+        height: 260px;
+      }
+      .hero-image .display-3 {
+        font-size: 1.7rem;
+      }
+      .carousel-item img {
+        height: 220px;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
     }
   </style>
 </head>
@@ -95,6 +149,7 @@
 
   <div id="techCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
+
       <div class="carousel-item active">
         <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg" class="d-block w-100" alt="Web Development">
         <div class="carousel-caption d-none d-md-block">
@@ -102,6 +157,7 @@
           <p>Web development is the building and maintenance of websites and applications.</p>
         </div>
       </div>
+
       <div class="carousel-item">
         <img src="https://www.shutterstock.com/image-photo/cyber-securitydigital-padlock-iconcyber-security-600nw-2630403947.jpg" class="d-block w-100" alt="Cyber Security">
         <div class="carousel-caption d-none d-md-block">
@@ -109,6 +165,7 @@
           <p>Cyber security helps reduce the risk and impact of cyber attacks.</p>
         </div>
       </div>
+
       <div class="carousel-item">
         <img src="https://www.bacsit.com/wp-content/uploads/2024/05/Network-Engineeering.jpg" class="d-block w-100" alt="Network Engineer">
         <div class="carousel-caption d-none d-md-block">
@@ -116,6 +173,7 @@
           <p>Network engineers troubleshoot systems to keep them running smoothly.</p>
         </div>
       </div>
+
     </div>
 
     <a class="carousel-control-prev" href="#techCarousel" role="button" data-slide="prev">
@@ -133,59 +191,50 @@
 
       <div class="col-md-4 mb-4">
         <div class="card shadow h-100">
-          <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg" 
-               class="card-img-top" alt="Web Dev">
-               <a href="https://brainstation.io/career-guides/what-is-web-development"></a>
+          <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg" class="card-img-top" alt="Web Dev">
           <div class="card-body">
             <h5 class="card-title">Web Development</h5>
             <p class="card-text">We build modern, responsive websites tailored to your business needs.</p>
           </div>
         </div>
       </div>
-      
-          <div class="col-md-4 mb-4">
-            <div class="card shadow h-100">
-              <img src="https://wallpapers.com/images/featured/cyber-security-background-meuqfzxcg4gdd26s.jpg" 
-                   class="card-img-top" alt="Cyber Sec">
-              <div class="card-body">
-                <h5 class="card-title">Cyber Security</h5>
-                <p class="card-text">Cybersecurity is the practice of protecting your critical systems, data, and networks from digital attacks</p>
-              </div>
-            </div>
-          </div>  
-          
-          <div class="col-md-4 mb-4">
-            <div class="card shadow h-100">
-              <img src="https://www.bacsit.com/wp-content/uploads/2024/05/Network-Engineeering.jpg" 
-                   class="card-img-top" alt="Net Eng">
-              <div class="card-body">
-                <h5 class="card-title">Network Engineer</h5>
-                <p class="card-text">Network engineer designs and builds computer network systems, including both software and hardware components.</p>
-              </div>
-            </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+          <img src="https://wallpapers.com/images/featured/cyber-security-background-meuqfzxcg4gdd26s.jpg" class="card-img-top" alt="Cyber Sec">
+          <div class="card-body">
+            <h5 class="card-title">Cyber Security</h5>
+            <p class="card-text">Cybersecurity protects your systems, data, and networks from digital attacks.</p>
           </div>
         </div>
-     </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+          <img src="https://www.bacsit.com/wp-content/uploads/2024/05/Network-Engineeering.jpg" class="card-img-top" alt="Net Eng">
+          <div class="card-body">
+            <h5 class="card-title">Network Engineer</h5>
+            <p class="card-text">Network engineers design and maintain computer network systems.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <div class="container text-center py-5">
     <a href="https://primaryt.co.uk/" class="btn btn-custom-primary mr-3">Primary Button</a>
     <a href="https://wlp.education/curriculum/secondary-curriculum/technical-subjects/secondary-technology/" class="btn btn-custom-secondary">Secondary Button</a><br>
-    <a href="contact.html" class="btn btn-custom-contact mr-3">Contact</a>
+    <a href="contact.html" class="btn btn-custom-contact mt-3">Contact</a>
   </div>
 
   <footer class="bg-dark text-white text-center py-4">
     <p>&copy; 2025 TechMe. All Rights Reserved.</p>
   </footer>
- 
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
