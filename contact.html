@@ -1,28 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - TechMe</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .hero-image {
+      background-image: url('https://img.freepik.com/free-photo/website-hosting-concept-with-bright-light_23-2149406783.jpg?semt=ais_se_enriched&w=740&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+    }
+    .hero-image .display-3 {
+      color: white;
+      font-weight: 700;
+    }
+    .hero-image p {
+      color: white;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container py-5">
-        <h2 class="text-center">Contact Us</h2>
-        <form>
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Your message here..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-dark">Send Message</button>
-        </form>
+
+  <div class="hero-image">
+    <div class="container text-center text-white d-flex justify-content-center align-items-center h-100">
+      <div>
+        <h1 class="display-3 font-weight-bold">TechMe</h1>
+        <p class="lead">The Future Coded in Every Byte</p>
       </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+
+    <form>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your Name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
+      </div>
+
+      <div class="form-group">
+        <label for="service">Choose a Service</label>
+        <select class="form-control" id="service">
+          <option>Web Development</option>
+          <option>App Development</option>
+          <option>Cloud Services</option>
+          <option>AI Solutions</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="d-block">Project Type</label>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="projectType" id="smallProject" value="Small">
+          <label class="form-check-label" for="smallProject">Small Project</label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="projectType" id="mediumProject" value="Medium">
+          <label class="form-check-label" for="mediumProject">Medium Project</label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="projectType" id="largeProject" value="Large">
+          <label class="form-check-label" for="largeProject">Large Project</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Your message here..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-dark">Send Message</button>
+    </form>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 TechMe. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
